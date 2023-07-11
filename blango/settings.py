@@ -58,6 +58,7 @@ class Dev(Configuration):
         'django.contrib.messages',
         'django.contrib.staticfiles',
         'blog',
+        'blango_auth',
         "debug_toolbar",
         "crispy_forms",
         "crispy_bootstrap5",
@@ -136,7 +137,7 @@ class Dev(Configuration):
     USE_L10N = True
 
     USE_TZ = True
-
+    AUTH_USER_MODEL = "blango_auth.User"
 
     # Static files (CSS, JavaScript, Images)
     # https://docs.djangoproject.com/en/3.2/howto/static-files/
