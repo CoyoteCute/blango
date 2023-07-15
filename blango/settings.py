@@ -25,6 +25,7 @@ class Dev(Configuration):
     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
     ]
+    
 
 
     # Quick-start development settings - unsuitable for production
@@ -195,7 +196,10 @@ class Dev(Configuration):
         "rest_framework.authentication.BasicAuthentication",
         "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.TokenAuthentication",
-    ]
+    ],
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticatedOrReadOnly",
+    ],
     }
 
 
